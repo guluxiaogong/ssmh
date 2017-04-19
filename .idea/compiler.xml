@@ -17,15 +17,24 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
-      <profile default="false" name="Annotation profile for ssmh" enabled="true">
+      <profile default="false" name="Annotation profile for antin-login" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="ssmh" />
+        <module name="antin-login" />
+      </profile>
+      <profile default="false" name="Annotation profile for antin-web" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="antin-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="antin-login" target="1.8" />
+      <module name="antin-web" target="1.8" />
       <module name="ssmh" target="1.8" />
     </bytecodeTargetLevel>
   </component>

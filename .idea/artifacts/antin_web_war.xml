@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="antin-web:war">
+    <output-path>$PROJECT_DIR$/antin-web/target</output-path>
+    <root id="archive" name="ssmh.war">
+      <element id="artifact" artifact-name="antin-web:war exploded" />
+    </root>
+  </artifact>
+</component>

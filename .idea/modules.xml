@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/antin-login/antin-login.iml" filepath="$PROJECT_DIR$/antin-login/antin-login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/antin-web/antin-web.iml" filepath="$PROJECT_DIR$/antin-web/antin-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssmh.iml" filepath="$PROJECT_DIR$/ssmh.iml" />
     </modules>
   </component>

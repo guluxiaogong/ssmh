@@ -1,10 +1,10 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="ssmh:war exploded">
-    <output-path>$PROJECT_DIR$/target/ssmh</output-path>
+  <artifact type="exploded-war" name="antin-web:war exploded">
+    <output-path>$PROJECT_DIR$/antin-web/target/ssmh</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="ssmh" />
+          <element id="module-output" name="antin-web" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.springframework:spring-core:4.1.9.RELEASE" />
@@ -22,6 +22,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.1.9.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-test:4.1.9.RELEASE" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.8.9" />
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.1.0" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.2.6" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:1.2.2" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:4.3.8.Final" />
@@ -54,7 +55,10 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.4.0" />
         </element>
       </element>
-      <element id="javaee-facet-resources" facet="ssmh/web/Web" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/antin-web/target/ssmh/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="antin-web/web/Web" />
     </root>
   </artifact>
 </component>
