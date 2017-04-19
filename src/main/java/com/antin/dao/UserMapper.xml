@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.antin.mapper">
+    <resultMap id="baseResultMap" type="com.antin.entity.UserModel">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="username" property="username" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="birthday" property="birthday" jdbcType="DATE"/>
+    </resultMap>
+
+    <!--增-->
+    <insert id="insert" parameterType="com.antin.entity.UserModel">
+        insert into ssm_user (id,username,password, birthday)
+        values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR}, #{birthday,jdbcType=DATE})
+    </insert>
+    <!--删-->
+    <delete id="deleteById" parameterType="java.lang.Integer">
+        delete from ssm_user where id=#{id}
+    </delete>
+    <!--改-->
+    <update id="update" parameterType="com.antin.entity.UserModel">
+        update ssm_user
+        <set>
+            <if test="username != null">
+                username = #{username,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                username = #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="birthday != null">
+                birthday = #{birthday,jdbcType=DATE},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <!--查-->
+    <sql id="base_column_list">
+        id,username, password,birthday
+    </sql>
+    <select id="selectById" resultType="com.antin.entity.UserModel" parameterType="java.lang.Integer">
+        select
+        <include refid="base_column_list"/>
+        from ssm_user
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <select id="selectAll" resultMap="baseResultMap">
+        select
+        <include refid="base_column_list"/>
+        from ssm_user
+    </select>
+</mapper>
